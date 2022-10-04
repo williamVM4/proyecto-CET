@@ -4,7 +4,7 @@ services:
     image: nginx:latest
     container_name: ${APP_NAME}-nginx
     ports:
-      - '80:80'
+      - '80:81'
       - '443:443'
     volumes:
       - "./nginx/:/etc/nginx/templates/"
@@ -56,7 +56,7 @@ services:
       PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
     ports:
-      - '8080:80'
+      - '8081:80'
     links:
       - mysql:mysql
 
